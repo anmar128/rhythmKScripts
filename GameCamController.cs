@@ -26,6 +26,7 @@ public class GameCamController : MonoBehaviour {
     private int playMode;               // Not playing ~ 0, playing ~ 1
     public int scoreValue;
     public GUIText scoreText;
+    public GUIText hintText;
 
     private AudioSource audioSource;
     private GestureListener gestureListener;
@@ -44,6 +45,15 @@ public class GameCamController : MonoBehaviour {
     void Update()
     {
         string mov;
+
+        if (playMode == 0)
+        {
+            hintText.text = "Swipe left to begin";
+        }
+        else
+        {
+            hintText.text = "Swipe up, down or right to play";
+        }
 
         // Input to start new game
         if (playMode == 0 && (Input.GetKeyDown(KeyCode.P) || gestureListener.IsSwipeLeft()))
