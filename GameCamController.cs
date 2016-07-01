@@ -11,11 +11,11 @@ public class GameCamController : MonoBehaviour {
     public GameObject midBar;
     public GameObject highBar;
     public GameObject highestBar;
-    private Vector3 lowestBarValues = new Vector3(0.0f, -2.66f, 0.0f);
-    private Vector3 lowBarValues = new Vector3(0.0f, -1.33f, 0.0f);
+    private Vector3 lowestBarValues = new Vector3(0.0f, -2.6f, 0.0f);
+    private Vector3 lowBarValues = new Vector3(0.0f, -1.3f, 0.0f);
     private Vector3 midBarValues = new Vector3(0.0f, 0.0f, 0.0f);
-    private Vector3 highBarValues = new Vector3(0.0f, 1.38f, 0.0f);
-    private Vector3 highestBarValues = new Vector3(0.0f, 2.75f, 0.0f);
+    private Vector3 highBarValues = new Vector3(0.0f, 1.35f, 0.0f);
+    private Vector3 highestBarValues = new Vector3(0.0f, 2.7f, 0.0f);
 
     // Ints and floats for in-game and time control
     private float spawnValue = 7.6f;    // Spawn x-distance ~ 6.6f, orthographic
@@ -30,7 +30,7 @@ public class GameCamController : MonoBehaviour {
 
     private AudioSource audioSource;
     private GestureListener gestureListener;
-
+    
     void Start()
     {
 
@@ -45,7 +45,7 @@ public class GameCamController : MonoBehaviour {
     void Update()
     {
         string mov;
-
+        
         if (playMode == 0)
         {
             hintText.text = "Swipe left to begin";
